@@ -202,7 +202,7 @@ func Execute() {
         str := parser.StringPositional(&argparse.Options{Help: "IP Address or domain name"})
         dot := parser.Selector("", "dot-server", []string{"dnssb", "aliyun", "dnspod", "google", "cloudflare"}, &argparse.Options{
                 Help: "Use DoT Server for DNS Parse [dnssb, aliyun, dnspod, google, cloudflare]"})
-        lang := parser.Selector("g", "language", []string{"en", "cn"}, &argparse.Options{Default: "cn",
+        lang := parser.Selector("g", "language", []string{"en", "cn"}, &argparse.Options{Default: "en",
                 Help: "Choose the language for displaying [en, cn]"})
         file := parser.String("", "file", &argparse.Options{Help: "Read IP Address or domain name from file"})
         noColor := parser.Flag("C", "no-color", &argparse.Options{Help: "Disable Colorful Output"})
